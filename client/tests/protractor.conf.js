@@ -3,7 +3,7 @@ exports.config = {
     specs: ['e2e/*.js'],
     allScriptsTimeout: 72000,
     troubleshoot: false,
-    baseUrl: 'http://192.168.33.11',
+    baseUrl: 'http://localhost:63342/ImageWall',
     directConnect: true,
     multiCapabilities: [
         {

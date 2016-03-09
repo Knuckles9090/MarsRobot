@@ -3,7 +3,7 @@ module.exports = function(config) {
     basePath : '../',
     frameworks: ['jasmine'],
     files: [
-        '../bower_components/angular/angular.js',
+        '../../bower_components/angular/angular.js',
         '../bower_components/angular-animate/angular-animate.js',
         '../bower_components/angular-resource/angular-resource.js',
         '../bower_components/angular-ui-router/release/angular-ui-router.js',
