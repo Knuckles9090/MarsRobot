@@ -3,6 +3,11 @@ Setup
 - 1. Run npm install
 - 2. Profit
 
+Building distribution
+---------------------------------
+To build dist folder, use
+"npm run build"
+
 Running tests
 ---------------------------------
 Run unit tests with

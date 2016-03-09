@@ -17,8 +17,6 @@ module.exports = function(grunt) {
                     'app/app.module.js',
                     'app/app.routes.js',
                     'app/app.constants.js',
-                    'app/app.directives.',
-                    'app/app.services.js',
                     'app/app.resources.js',
                     'app/**/*.js'
                 ],
@@ -36,26 +34,6 @@ module.exports = function(grunt) {
                         new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})
                     ]
                 }
-            }
-        },
-        bump: {
-            options: {
-                files: [
-                    'package.json'
-                ],
-                updateConfigs: [],
-                commit: true,
-                commitMessage: 'Release v%VERSION%',
-                commitFiles: ['package.json'],
-                createTag: true,
-                tagName: 'v%VERSION%',
-                tagMessage: 'Version %VERSION%',
-                push: false,
-                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
-                globalReplace: false,
-                prereleaseName: false,
-                metadata: '',
-                regExp: false
             }
         },
         clean: ["app/app.min.js", "app/assets/css/styles.min.css", "dist"],
@@ -83,7 +61,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-ng-annotate');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
