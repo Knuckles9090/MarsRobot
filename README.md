@@ -1,5 +1,3 @@
-Client for ImageWall Application!
-
 Setup
 ---------------------------------
 - 1. Run npm install
