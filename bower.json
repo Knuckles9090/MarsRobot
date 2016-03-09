@@ -1,0 +1,30 @@
+{
+  "name": "imagewall",
+  "description": "Example app for Runpath",
+  "main": "index.html",
+  "authors": [
+    "Joona Rahko"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "AngularJS"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angularUtils-pagination": "angular-utils-pagination#~0.11.0",
+    "angular-resource": "~1.5.0",
+    "angular-ui-router": "~0.2.18",
+    "angular-animate": "~1.5.0",
+    "angular-bootstrap": "~1.2.4"
+  }
+}

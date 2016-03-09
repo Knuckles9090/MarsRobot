@@ -1,0 +1,9 @@
+{
+  "verbose": true,
+  "ext": "js, json, less, html",
+  "exec": "npm run grunt-default",
+  "ignore": [
+    "app/app.min.js",
+    "assets/css/styles.min.css"
+  ]
+}
