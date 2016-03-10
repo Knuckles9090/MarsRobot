@@ -25,14 +25,13 @@
 })();
 
 (function(){
-  angular.module("imagewallApp").directive("imageWall", function() {
+  angular.module("imagewallApp").directive("thumbnail", function() {
     return {
       restrict: "E",
-      templateUrl: 'app/components/partials/imagewall.tmpl.html',
+      templateUrl: 'app/components/partials/image.tmpl.html',
       scope: {
-        images: '=',
-        titleSearch: '=',
-        pageItemCount: '='
+        thumbnailUrl: '=',
+        title: '='
       }
     };
   });

@@ -9,7 +9,7 @@
   "scripts": {
     "prestart": "npm run build",
     "start": "node server/server.js",
-    "postinstall": "npm run bower-up && npm run grunt-default && npm run update-webdriver",
+    "postinstall": "npm run bower-up && npm run prestart && npm run update-webdriver && chmod a+x server/server.js",
     "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
     "bower-up": "bower install",
     "build": "./node_modules/.bin/grunt create-production",
