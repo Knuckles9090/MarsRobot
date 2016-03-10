@@ -14,6 +14,12 @@
     $resourceProvider.defaults.stripTrailingSlashes = true;
   });
 
+  angular.module("imagewallApp").config(function($locationProvider) {
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
+  });
 
   //Defining states for the application
   angular.module('imagewallApp').config(function($stateProvider, $urlRouterProvider) {

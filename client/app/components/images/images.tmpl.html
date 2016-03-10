@@ -35,8 +35,13 @@
         <div class="panel-body">
             <div class="col-lg-12">
                 <div ng-show="!loadingImages" dir-paginate="image in images | filter: titleSearch | itemsPerPage: pageItemCount || 1">
-                    <div class="col-lg-2 col-sm-4 col-xs-12 wall-image">
-                        <img name="image-thumbnail" ng-src="{{ ::image.thumbnailUrl }}">
+                    <div class="col-lg-2 col-sm-4 col-xs-12">
+                        <div class="wall-image">
+                            <img ng-src="{{ ::image.thumbnailUrl }}">
+                            <div class="image-caption">
+                                <p class="image-caption-text">{{ ::image.title }}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

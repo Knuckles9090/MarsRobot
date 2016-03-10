@@ -7,6 +7,8 @@
     "test": "tests"
   },
   "scripts": {
+    "prestart": "npm run build",
+    "start": "node server/server.js",
     "postinstall": "npm run bower-up && npm run grunt-default && npm run update-webdriver",
     "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
     "bower-up": "bower install",
@@ -41,5 +43,9 @@
     "protractor": "^3.1.1"
   },
   "author": "Joona Rahko",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.6.1",
+    "express": "^4.13.4"
+  }
 }
