@@ -16,6 +16,7 @@ module.exports = function(grunt) {
         src: [
           'client/app/app.module.js',
           'client/app/app.routes.js',
+          'client/app/app.directives.js',
           'client/app/app.constants.js',
           'client/app/app.resources.js',
           'client/app/**/*.js'

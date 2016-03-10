@@ -1,47 +1,71 @@
 @cool-blue: #5ec2ed;
 
-.wall-image {
-  margin: 15px 0;
-  text-align: center;
+/* Image Box Style */
+.image-box {
+  border: 5px solid #fff;
   cursor: pointer;
+  float: left;
+  height: 160px;
+  width: 160px;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  -moz-box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow: 1px 1px 1px 1px #ccc;
+  margin: 7px 7px;
   img {
-    border: 1px solid #f0f0f0;
-  }
-  .image-caption {
-    opacity: 0.0;
-    background: #0f0f0f;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
     position: absolute;
+    left: 0;
+    -webkit-transition: all 350ms ease-out;
+    -moz-transition: all 350ms ease-out;
+    -o-transition: all 350ms ease-out;
+    -ms-transition: all 350ms ease-out;
+    transition: all 350ms ease-out;
+  }
+  .caption {
+    background-color: #333838 !important;
+    position: absolute;
+    color: #ffffff;
+    z-index: 100;
+    -webkit-transition: all 350ms ease-out;
+    -moz-transition: all 350ms ease-out;
+    -o-transition: all 350ms ease-out;
+    -ms-transition: all 350ms ease-out;
+    transition: all 350ms ease-out;
+    left: 0;
+  }
+  .sliding-caption {
+    background-color: #333838 !important;
     width: 150px;
     height: 150px;
-    line-height: 150px;
-    padding: 0 10px;
-    color: #ffffff;
-    top: 15px;
-    left: 15px;
-    vertical-align: middle;
+    line-height: 120px;
+    padding: 12px;
+    left: -150px;
     text-align: center;
+    vertical-align: middle;
     .image-caption-text {
       line-height: 1.5;
       vertical-align: middle;
       display: inline-block;
       border-bottom: 1px solid @cool-blue;
     }
-    &:hover {
-      opacity: 1.0;
-      -webkit-box-shadow: 0 0 8px 0 @cool-blue;
-      -moz-box-shadow: 0 0 8px 0 @cool-blue;
-      box-shadow: 0 0 8px 0 @cool-blue;
+  }
+  &:hover {
+    .sliding-caption {
+      -moz-transform: translateX(100%);
+      -o-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      opacity: 1;
     }
-    &:active {
-      opacity: 1.0;
-      -webkit-box-shadow: 0 0 8px 0 @cool-blue;
-      -moz-box-shadow: 0 0 8px 0 @cool-blue;
-      box-shadow: 0 0 8px 0 @cool-blue;
+  }
+  &:active {
+    .sliding-caption {
+      -moz-transform: translateX(100%);
+      -o-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      opacity: 1;
     }
   }
 }
