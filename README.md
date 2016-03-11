@@ -1,7 +1,15 @@
+DEMO
+---------------------------------
+http://imagewallapp.herokuapp.com
+
 Setup
 ---------------------------------
-- 1. Run npm install
-- 2. Profit
+- 1. "run npm install"
+- 2. "npm start"
+
+Developing
+----------
+Run "nodemon" to have your files watched
 
 Building distribution
 ---------------------------------
