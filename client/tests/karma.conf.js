@@ -3,13 +3,13 @@ module.exports = function(config) {
     basePath : '../client/',
     frameworks: ['jasmine'],
     files: [
-        '../client/bower_components/angular/angular.js',
-        '../client/bower_components/angular-animate/angular-animate.js',
-        '../client/bower_components/angular-resource/angular-resource.js',
-        '../client/bower_components/angular-ui-router/release/angular-ui-router.js',
-        '../client/bower_components/angular-utils-pagination/dirPagination.js',
-        '../client/app/app.min.js',
-        '../client/tests/unit/*.js'
+        '../bower_components/angular/angular.js',
+        '../bower_components/angular-animate/angular-animate.js',
+        '../bower_components/angular-resource/angular-resource.js',
+        '../bower_components/angular-ui-router/release/angular-ui-router.js',
+        '../bower_components/angularUtils-pagination/dirPagination.js',
+        '../app/app.min.js',
+        '../tests/unit/*.js'
     ],
     exclude: [
     ],
