@@ -15,7 +15,7 @@
     });
 
     it('should redirect to images state with unmatched route', function() {
-      browser.get(browser.baseUrl + "/not-really-an-existing-address");
+      browser.get(browser.baseUrl + '/not-really-an-existing-address');
       expect(browser.getCurrentUrl()).toContain('images');
     });
 

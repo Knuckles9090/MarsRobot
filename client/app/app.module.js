@@ -4,10 +4,10 @@
   //Defining app and adding dependencies
   angular.module('imagewallApp',
     [
-      "ui.router",
-      "angularUtils.directives.dirPagination",
-      "ngResource",
-      "ngAnimate"
+      'ui.router',
+      'angularUtils.directives.dirPagination',
+      'ngResource',
+      'ngAnimate'
     ]
   );
 })();

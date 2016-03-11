@@ -1,23 +1,23 @@
 <!-- Sidebar controls for desktop -->
-<sidebar-controls title-search="titleSearch" page-item-count="pageItemCount"></sidebar-controls>
+<sidebar-controls title-search='titleSearch' page-item-count='pageItemCount'></sidebar-controls>
 
 <!-- Panel controls for mobile -->
-<panel-controller title-search="titleSearch" page-item-count="pageItemCount"></panel-controller>
+<panel-controller title-search='titleSearch' page-item-count='pageItemCount'></panel-controller>
 
 <!-- Content area for images -->
-<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-4">
-    <div class="panel panel-primary padded-panel">
-        <div class="panel-heading">
-            <i class="fa fa-file-image-o"></i> Images ({{ images.length }})
+<div class='col-lg-9 col-md-8 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-4'>
+    <div class='panel panel-primary padded-panel'>
+        <div class='panel-heading'>
+            <i class='fa fa-file-image-o'></i> Images ({{ images.length }})
         </div>
-        <div class="panel-body">
-            <div class="col-lg-12 nopadding">
-                <div ng-show="!loadingImages" dir-paginate="image in images | filter: titleSearch | itemsPerPage: pageItemCount || 1">
-                    <thumbnail thumbnail-url="image.thumbnailUrl" title="image.title"></thumbnail>
+        <div class='panel-body'>
+            <div class='col-lg-12 nopadding'>
+                <div ng-show='!loadingImages' dir-paginate='image in images | filter: titleSearch | itemsPerPage: pageItemCount || 1'>
+                    <thumbnail thumbnail-url='image.thumbnailUrl' title='image.title'></thumbnail>
                 </div>
             </div>
-            <div ng-show="loadingImages" class="text-center">
-                <i class="fa fa-lg fa-spinner fa-spin"></i> Loading images...
+            <div ng-show='loadingImages' class='text-center'>
+                <i class='fa fa-lg fa-spinner fa-spin'></i> Loading images...
             </div>
         </div>
     </div>

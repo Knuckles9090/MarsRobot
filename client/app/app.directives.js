@@ -1,7 +1,7 @@
 (function(){
-  angular.module("imagewallApp").directive("sidebarControls", function() {
+  angular.module('imagewallApp').directive('sidebarControls', function() {
     return {
-      restrict: "E",
+      restrict: 'E',
       templateUrl: 'app/components/partials/sidebar.tmpl.html',
       scope: {
         titleSearch: '=',
@@ -12,9 +12,9 @@
 })();
 
 (function(){
-  angular.module("imagewallApp").directive("panelController", function() {
+  angular.module('imagewallApp').directive('panelController', function() {
     return {
-      restrict: "E",
+      restrict: 'E',
       templateUrl: 'app/components/partials/panelcontrol.tmpl.html',
       scope: {
         titleSearch: '=',
@@ -25,9 +25,9 @@
 })();
 
 (function(){
-  angular.module("imagewallApp").directive("thumbnail", function() {
+  angular.module('imagewallApp').directive('thumbnail', function() {
     return {
-      restrict: "E",
+      restrict: 'E',
       templateUrl: 'app/components/partials/image.tmpl.html',
       scope: {
         thumbnailUrl: '=',
