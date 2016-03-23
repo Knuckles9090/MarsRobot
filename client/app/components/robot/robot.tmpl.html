@@ -82,17 +82,14 @@
                     <button type='submit' class='btn btn-default'>
                         <i class='fa fa-play'></i> Run Robot (Beep-Boop!)
                     </button>
-                    <button type='button' class='btn btn-default' ng-click='grid = {};generateGrid = false;'>
+                    <button type='button' class='btn btn-default' ng-click='grid = {};'>
                         <i class='fa fa-gavel'></i> Build New World
-                    </button>
-                    <button type='button' class='btn btn-default' ng-click='generateGrid = true;'>
-                        <i class='fa fa-eye'></i> Show Grid
                     </button>
                 </form>
             </div>
         </div>
         <!-- Content area for robot -->
-        <div ng-if='generateGrid' class='panel panel-primary'>
+        <div class='panel panel-primary'>
             <div class='panel-heading'>
                 <i class='fa fa-th'></i> Mars Grid
             </div>
