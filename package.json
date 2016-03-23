@@ -1,5 +1,5 @@
 {
-  "name": "imagewall",
+  "name": "marsrobot",
   "version": "1.0.0",
   "description": "Example app for Runpath",
   "main": "index.html",
@@ -12,11 +12,11 @@
     "postinstall": "npm run bower-up && npm run prestart && npm run update-webdriver && chmod a+x server/server.js",
     "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
     "bower-up": "bower install",
-    "build": "./node_modules/.bin/grunt create-production",
-    "e2e-tests": "./node_modules/.bin/protractor client/tests/protractor.conf.js",
-    "unit-tests": "./node_modules/.bin/karma start client/tests/karma.conf.js",
-    "watch-files": "./node_modules/.bin/nodemon",
-    "grunt-default": "./node_modules/.bin/grunt default"
+    "build": "grunt create-production",
+    "e2e-tests": "protractor client/tests/protractor.conf.js",
+    "unit-tests": "karma start client/tests/karma.conf.js",
+    "watch-files": "nodemon",
+    "grunt-default": "grunt default"
   },
   "keywords": [
     "AngularJS"
@@ -47,5 +47,13 @@
   "dependencies": {
     "compression": "^1.6.1",
     "express": "^4.13.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Knuckles9090/ImageWallApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Knuckles9090/ImageWallApp/issues"
+  },
+  "homepage": "https://github.com/Knuckles9090/ImageWallApp#readme"
 }

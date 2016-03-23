@@ -2,12 +2,13 @@
   'use strict';
 
   //Defining app and adding dependencies
-  angular.module('imagewallApp',
+  angular.module('marsRobotApp',
     [
       'ui.router',
       'angularUtils.directives.dirPagination',
       'ngResource',
-      'ngAnimate'
+      'ngAnimate',
+      'mgcrea.ngStrap'
     ]
   );
 })();

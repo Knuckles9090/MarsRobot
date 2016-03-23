@@ -1,5 +1,5 @@
 (function(){
-  angular.module('imagewallApp').factory('ImageResource', function($resource, ResourcePath) {
+  angular.module('marsRobotApp').factory('ImageResource', function($resource, ResourcePath) {
     return $resource(ResourcePath+'/photos', {}, {
       'query': {
         method: 'GET',

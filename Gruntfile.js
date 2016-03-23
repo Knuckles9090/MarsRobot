@@ -17,6 +17,7 @@ module.exports = function(grunt) {
           'client/app/app.module.js',
           'client/app/app.routes.js',
           'client/app/app.directives.js',
+          'client/app/app.factories.js',
           'client/app/app.constants.js',
           'client/app/app.resources.js',
           'client/app/**/*.js'
@@ -67,7 +68,7 @@ module.exports = function(grunt) {
 
 
   // Default task(s).
-  grunt.registerTask('default', ['clean', 'ngAnnotate', 'uglify', 'less']);
-  grunt.registerTask('create-production', ['clean', 'ngAnnotate', 'uglify', 'less', 'copy']);
+  grunt.registerTask('default', ['clean', 'ngAnnotate',  'less']);
+  grunt.registerTask('create-production', ['clean', 'ngAnnotate',  'less', 'copy']);
 
 };
