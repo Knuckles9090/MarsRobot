@@ -34,8 +34,7 @@
         $scope.robot.setLocationAndOrientation(startLocation);
         for (var i = 0; i < directions.length; i++) {
           moveRobot(directions[i]);
-          var signal = checkRobotSignal();
-          if (!signal) {
+          if (!$scope.robot.hasSignal($scope.grid)) {
             safeRobotJourney = false;
             break;
           }
@@ -56,10 +55,6 @@
       } else if (direction === 'R') {
         $scope.robot.turnRight();
       }
-    }
-
-    function checkRobotSignal() {
-      return $scope.robot.hasSignal($scope.grid);
     }
 
     function getCellClass(row, column) {
