@@ -29,20 +29,32 @@
     }
 
     function runRobot(form, startLocation, directions) {
+      var safeRobotJourney = true;
       if (startLocation && form.$valid) {
-        var safeRobotJourney = true;
         $scope.robot.setLocationAndOrientation(startLocation);
-        for (var i = 0; i < directions.length; i++) {
-          moveRobot(directions[i]);
-          if (!$scope.robot.hasSignal($scope.grid)) {
-            safeRobotJourney = false;
-            break;
+        if ($scope.robot.hasSignal($scope.grid)) {
+          for (var i = 0; i < directions.length; i++) {
+            moveRobot(directions[i]);
+            if (!$scope.robot.hasSignal($scope.grid)) {
+              safeRobotJourney = false;
+              break;
+            }
           }
-        }
-        if (safeRobotJourney) {
-          $scope.intergalacticConsole.safeAndSoundMessage($scope.robot.x, $scope.robot.y, $scope.robot.orientation);
+          if (safeRobotJourney) {
+            $scope.intergalacticConsole.safeAndSoundMessage(
+                $scope.robot.x,
+                $scope.robot.y,
+                $scope.robot.orientation
+            );
+          } else {
+            $scope.intergalacticConsole.anotherOneBitesTheDustMessage(
+                $scope.robot.previousLocation.x,
+                $scope.robot.previousLocation.y,
+                $scope.robot.previousLocation.orientation
+            );
+          }
         } else {
-          $scope.intergalacticConsole.anotherOneBitesTheDustMessage($scope.robot.x, $scope.robot.y, $scope.robot.orientation);
+          $scope.intergalacticConsole.missPlacedRobot();
         }
       }
     }
