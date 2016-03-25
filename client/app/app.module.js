@@ -5,7 +5,6 @@
   angular.module('marsRobotApp',
     [
       'ui.router',
-      'angularUtils.directives.dirPagination',
       'ngResource',
       'ngAnimate',
       'mgcrea.ngStrap'

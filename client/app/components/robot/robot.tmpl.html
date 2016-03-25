@@ -1,39 +1,27 @@
-<!-- Panel for robot controls -->
-<div class="col-lg-9">
-    <div ng-show="!grid.width && !grid.height">
+<div class="col-lg-8">
+    <!-- World Creation Component -->
+    <div id="world-creation-panel" ng-show="!grid.width && !grid.height">
         <div class="panel panel-primary padded-panel">
             <div class="panel-heading">
                 <i class="fa fa-filter"></i> World Setup
             </div>
             <div class="panel-body">
                 <form name="worldCreationForm" ng-submit="initWorld(worldCreationForm, worldSize)">
-                    <!-- World Size Input Component -->
                     <div class="form-group">
-                        <label>World Size (width, height)</label>
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="fa fa-fw fa-globe"></i>
-                            </span>
-                            <input name="size"
-                                   id="size"
-                                   type="text"
-                                   class="form-control"
-                                   ng-model="worldSize"
-                                   placeholder="Write upper right coordinates of the world here"
-                                   ng-pattern="/^\d+,\d+$/"
-                                   upper-case
-                                   required/>
+                        <world-input world-size="worldSize"></world-input>
+                        <div ng-show="worldCreationForm.size.$error.pattern === true" class="error-message">
+                            Input invalid, should be in #,# format!
+                        </div>
                     </div>
-                        <div ng-show="worldCreationForm.size.$error.pattern === true" class="error-message">Input invalid, should be in #,# format!</div>
-                    </div>
-                    <button type="submit" class="btn btn-default">
+                    <button id="world-creation-button" type="submit" class="btn btn-default">
                         <i class="fa fa-gavel"></i> Build World
                     </button>
                 </form>
             </div>
         </div>
     </div>
-    <div ng-show="grid.width && grid.height">
+    <!-- Robot location and directions -->
+    <div id="robot-control-panel" ng-show="grid.width && grid.height">
         <div class="panel panel-primary padded-panel">
             <div class="panel-heading">
                 <i class="fa fa-filter"></i> Robot Controls
@@ -42,47 +30,22 @@
                 <form name="robotControlForm" ng-submit="runRobot(robotControlForm, startLocation, directions)">
                     <!-- Robot Location Input Component -->
                     <div class="form-group">
-                        <label>Robot Location (x, y)</label>
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="fa fa-fw fa-location-arrow"></i>
-                            </span>
-                            <input name="startlocation"
-                                   type="text"
-                                   id="startlocation"
-                                   ng-model="startLocation"
-                                   placeholder="Write robot start location and orientation here"
-                                   ng-pattern="/^\d+,\d+[WNES]$/"
-                                   class="form-control"
-                                   upper-case
-                                   required/>
+                        <location-input start-location="startLocation"></location-input>
+                        <div ng-show="robotControlForm.startlocation.$error.pattern === true" class="error-message">
+                            Input invalid, should for example be 1,1N!
                         </div>
-                        <div ng-show="robotControlForm.startlocation.$error.pattern === true" class="error-message">Input invalid, should for example be 1,1N!</div>
                     </div>
-                    <!-- Instruction Input Component -->
+                    <!-- Directions Input Component -->
                     <div class="form-group">
-                        <label>Robot Directions</label>
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="fa fa-fw fa-arrows"></i>
-                            </span>
-                            <input name="directions"
-                                   type="text"
-                                   id="directions"
-                                   ng-model="directions"
-                                   placeholder="Write robot directions here"
-                                   ng-pattern="/^[LRF]+$/"
-                                   class="form-control"
-                                   upper-case/>
-                        </div>
+                        <directions-input directions="directions"></directions-input>
                         <div ng-show="robotControlForm.directions.$error.pattern === true" class="error-message">
                             Invalid command in command queue. L,R & F are acceptable commands.
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-default">
+                    <button id="run-button" type="submit" class="btn btn-default">
                         <i class="fa fa-play"></i> Run Robot (Beep-Boop!)
                     </button>
-                    <button type="button" class="btn btn-default" ng-click="grid = {};">
+                    <button id="new-world-button" type="button" class="btn btn-default" ng-click="grid = {};">
                         <i class="fa fa-gavel"></i> Build New World
                     </button>
                 </form>
@@ -96,8 +59,8 @@
             <div class="panel-body no-padding">
                 <table class="table table-bordered table-responsive mars-grid">
                     <tbody>
-                        <tr ng-repeat="row in range(grid.height)">
-                            <td class="coordinates" ng-repeat="column in range(grid.width)" ng-class="getCellClass(column, row)" data-container="body" data-title="x: {{ column }}, y: {{ grid.height - row - 1 }}" bs-tooltip></td>
+                        <tr ng-repeat="row in rows">
+                            <td class="coordinates" ng-repeat="column in columns" ng-class="getCellClass(column, row)" data-container="body" data-title="x: {{ column }}, y: {{ grid.height - row - 1 }}" bs-tooltip></td>
                         </tr>
                     </tbody>
                 </table>
@@ -105,6 +68,7 @@
         </div>
     </div>
 </div>
-<div class="col-lg-3">
+<!-- Console -->
+<div class="col-lg-4">
     <pre>{{ intergalacticConsole.output() }}<div class="blink">&#9646;</div></pre>
 </div>

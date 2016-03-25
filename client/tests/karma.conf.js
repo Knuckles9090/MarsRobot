@@ -1,13 +1,13 @@
 module.exports = function(config) {
   config.set({
-    basePath : '../client/',
     frameworks: ['jasmine'],
     files: [
         '../bower_components/angular/angular.js',
+        '../bower_components/angular-strap/dist/angular-strap.js',
         '../bower_components/angular-animate/angular-animate.js',
         '../bower_components/angular-resource/angular-resource.js',
         '../bower_components/angular-ui-router/release/angular-ui-router.js',
-        '../bower_components/angularUtils-pagination/dirPagination.js',
+        '../bower_components/angular-mocks/angular-mocks.js',
         '../app/app.min.js',
         '../tests/unit/*.js'
     ],

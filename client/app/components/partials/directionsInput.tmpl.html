@@ -1,0 +1,15 @@
+<!-- Robot directions input component -->
+<label>Robot Directions</label>
+<div class="input-group">
+    <span class="input-group-addon">
+        <i class="fa fa-fw fa-arrows"></i>
+    </span>
+    <input name="directions"
+           type="text"
+           id="directions"
+           ng-model="directions"
+           placeholder="Write robot directions here"
+           ng-pattern="/^[LRF]+$/"
+           class="form-control"
+           upper-case/>
+</div>

@@ -1,0 +1,16 @@
+<!-- World Size Input Component -->
+<label>World Size (width, height)</label>
+<div class="input-group">
+    <span class="input-group-addon">
+        <i class="fa fa-fw fa-globe"></i>
+    </span>
+    <input name="size"
+           type="text"
+           id="size"
+           class="form-control"
+           ng-model="worldSize"
+           placeholder="Write upper right coordinates of the world here"
+           ng-pattern="/^\d+,\d+$/"
+           upper-case
+           required/>
+</div>

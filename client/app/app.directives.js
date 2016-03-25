@@ -1,37 +1,34 @@
 (function(){
-  angular.module('marsRobotApp').directive('sidebarControls', function() {
+  angular.module('marsRobotApp').directive('worldInput', function() {
     return {
       restrict: 'E',
-      templateUrl: 'app/components/partials/sidebar.tmpl.html',
+      templateUrl: 'app/components/partials/worldInput.tmpl.html',
       scope: {
-        titleSearch: '=',
-        pageItemCount: '='
+        worldSize: '='
       }
     };
   });
 })();
 
 (function(){
-  angular.module('marsRobotApp').directive('panelController', function() {
+  angular.module('marsRobotApp').directive('locationInput', function() {
     return {
       restrict: 'E',
-      templateUrl: 'app/components/partials/panelcontrol.tmpl.html',
+      templateUrl: 'app/components/partials/locationInput.tmpl.html',
       scope: {
-        titleSearch: '=',
-        pageItemCount: '='
+        startLocation: '='
       }
     };
   });
 })();
 
 (function(){
-  angular.module('marsRobotApp').directive('thumbnail', function() {
+  angular.module('marsRobotApp').directive('directionsInput', function() {
     return {
       restrict: 'E',
-      templateUrl: 'app/components/partials/image.tmpl.html',
+      templateUrl: 'app/components/partials/directionsInput.tmpl.html',
       scope: {
-        thumbnailUrl: '=',
-        title: '='
+        directions: '='
       }
     };
   });

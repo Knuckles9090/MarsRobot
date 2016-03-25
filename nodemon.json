@@ -5,6 +5,10 @@
   "ignore": [
     "client/app/app.min.js",
     "client/assets/css/styles.min.css",
+    "client/tests/**/**",
+    "client/tests/*/**",
+    "client/tests/**/*",
+    "client/tests",
     "npm-debug.log",
     "dist",
     "dist/**/**"

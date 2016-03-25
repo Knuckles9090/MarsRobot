@@ -7,7 +7,6 @@
     $scope.initWorld = initWorld;
     $scope.runRobot = runRobot;
     $scope.getCellClass = getCellClass;
-    $scope.range = range;
     $scope.robot = new RobotFactory();
     $scope.intergalacticConsole = new IntergalacticConsoleFactory();
 
@@ -18,6 +17,8 @@
         $scope.robot = new RobotFactory();
         $scope.intergalacticConsole = new IntergalacticConsoleFactory();
         $scope.grid = parseGridSize(worldSize);
+        $scope.columns = range($scope.grid.width);
+        $scope.rows = range($scope.grid.height);
       }
     }
 

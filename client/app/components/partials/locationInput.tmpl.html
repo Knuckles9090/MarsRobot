@@ -1,0 +1,16 @@
+<!-- Location Input Component -->
+<label>Robot Location (x, y)</label>
+<div class="input-group">
+    <span class="input-group-addon">
+        <i class="fa fa-fw fa-location-arrow"></i>
+    </span>
+    <input name="start-location"
+           type="text"
+           id="start-location"
+           ng-model="startLocation"
+           placeholder="Write robot start location and orientation here"
+           ng-pattern="/^\d+,\d+[WNES]$/"
+           class="form-control"
+           upper-case
+           required/>
+</div>
