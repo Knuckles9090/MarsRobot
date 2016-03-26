@@ -1,6 +1,6 @@
 DEMO
 ---------------------------------
-http://imagewallapp.herokuapp.com
+http://marsrobot.herokuapp.com
 
 Setup
 ---------------------------------
@@ -9,7 +9,7 @@ Setup
 
 Developing
 ----------
-Run "nodemon" to have your files watched
+Run "npm run watch-files" to have your files watched
 
 Building distribution
 ---------------------------------
