@@ -76,11 +76,11 @@
       };
 
       this.anotherOneBitesTheDustMessage = function (x, y, orientation) {
-        this.message += 'Another robot bites the dust at: ' + x + ',' + y + orientation + 'LOST\n';
+        this.message += 'Robot bites the dust at: ' + x + ',' + y + orientation + 'LOST\n';
       };
 
       this.safeAndSoundMessage = function (x, y, orientation) {
-        this.message += 'Robot safely arrived to: ' + x + ',' + y + orientation + '\n';
+        this.message += 'Safely arrived to: ' + x + ',' + y + orientation + '\n';
       };
 
       this.missPlacedRobot = function() {
