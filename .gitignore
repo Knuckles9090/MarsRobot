@@ -3,3 +3,4 @@ bower_components
 node_modules
 .metadata/
 dist
+client/app/app.min.js
