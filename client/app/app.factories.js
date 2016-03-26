@@ -69,7 +69,7 @@
   'use strict';
   angular.module('marsRobotApp').factory('IntergalacticConsoleFactory', function() {
     return function () {
-      this.message = 'Welcome to InterGalactic Console!\n';
+      this.message = 'InterGalactic Console\n';
 
       this.output = function () {
         return this.message.replace(/\n$/, '');
